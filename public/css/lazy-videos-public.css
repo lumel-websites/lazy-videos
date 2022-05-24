@@ -1,0 +1,158 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.lazy-video-container{
+    position: relative;
+}
+
+.lazy-video-box{
+    display: block;
+    position: relative;
+    z-index: 1;
+    line-height: 0;
+}
+
+.lazy-video-wrapper {
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.lazy-video-wrapper iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.lazy-overlay {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.lazy-overlay-image{
+    position: absolute;
+}
+
+.lazy-overlay-hover{
+    background: rgba(83, 84, 84, 0.76);
+    width: 127px;
+    height: 81px;
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    margin-left: -4rem;
+    margin-top: -3rem;
+    -webkit-transition: all 80ms ease-out 0s;
+    transition: all 80ms ease-out 0s;
+}
+
+.lazy-overlay:hover .lazy-overlay-hover{  
+    background: rgba(83, 84, 84, 0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.lazy-play-icon{
+    display: block;
+    position: absolute;
+    z-index: 100;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    margin-left: -4rem;
+    margin-top: -3rem;
+    width:127px;
+    height:81px;
+    background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAABRCAYAAAD7G3lVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAATFJREFUeNrs22FtwkAYx+F2QcAkMAfgYBKQwBxMQh1MwiRQB+CgEoaDzkG5S1a+E5IF+n+e5D4ve3+7N0s4mgYAAAAAAAAAAAAA7jFN06cp5MavjuWsTSMzfjWWszORzPizQzmvJpMZ3xYIj28LiG8LpMeffdsCufGrn3LeTS0z/uzLFsiNbwuEx7cFxL9ugY1pZsafdSaaG78abIHc+LaA+MvbAi/+XG5Sww9L2QLtEm/+P/2oUzkfbduexc+LX51L/DdrP09fzvaZf4GVhjf7/Vv3vVFk/bfvMUhg/PoAZG+6efE9Aw+MP/oCSGZ8tz0wvtseGn9w2zPjdyaXF99n9aHx3fbA+G57aHy3PTC+N/mh8b3DD4zvtofGd9tD47vtAAAAAAAAAAAAADymiwADAOSj1JBfF8xMAAAAAElFTkSuQmCC") no-repeat scroll 0px 0px / 127px 81px; 
+    
+}
+
+.lazy-videos-popup-overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(83, 84, 84, 0.3);
+    top: 0;
+    z-index: 999;
+}
+
+.lazy-videos-popup{
+    position: relative;
+    width: 60%;
+    max-width: 1080px;;
+    height:calc(50% - 0px);
+    margin: 0px auto;
+    z-index: 9999;
+    top:20%;
+}
+
+.lazy-videos-popup-close{
+    position: absolute;
+    background: none;
+    border: unset;
+    cursor:pointer;
+}
+
+.lazy-videos-popup iframe{
+    width:100%;
+    height:608px;
+}
+
+@media only screen and (max-width:1440px){
+    .lazy-videos-popup iframe{
+        height:486px;
+    }
+}
+
+@media only screen and (max-width:1280px){
+    .lazy-videos-popup iframe{
+        height:432px;
+    }
+}
+
+@media only screen and (max-width:1280px){
+    .lazy-videos-popup iframe{
+        height:432px;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .lazy-videos-popup{
+        width:90%;
+    }
+
+    .lazy-videos-popup iframe{
+        height:390px;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .lazy-videos-popup{
+        width:90%;
+    }
+
+    .lazy-videos-popup iframe{
+        height:190px;
+    }
+}
+
