@@ -54,7 +54,7 @@
 			}
 
 			if(provider=="vimeo"){
-				video_code  = url.split('/').pop();
+				video_code  = url.split('/')[3];
 				embed_code = '<iframe loading="lazy" src="https://player.vimeo.com/video/' + video_code  + '?autoplay=1&volume=1" allowtransparency="true" allow="autoplay" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen></iframe>';
 			}
 

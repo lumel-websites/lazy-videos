@@ -161,8 +161,8 @@ class Lazy_Videos_Public {
 
 		if( $provider == "vimeo" && $poster == "" ) {
 
-			$video_url = explode( "/", $url );
-			$video_code =  end($video_url);
+			$video_code = explode( "/", $url )[3];
+			//$video_code =  end($video_url);
 			$poster = "https://vumbnail.com/$video_code.jpg";
 
 		}
