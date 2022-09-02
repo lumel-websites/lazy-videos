@@ -42,9 +42,6 @@
     overflow: hidden;
 }
 
-.lazy-overlay-image{
-    position: absolute;
-}
 
 .lazy-overlay-hover{
     background: rgba(83, 84, 84, 0.76);
