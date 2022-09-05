@@ -190,7 +190,7 @@ class Lazy_Videos_Public {
 			<div class="lazy-video-box">
 				<div class="lazy-video-wrapper" style="padding-top:56.2963%"></div>
 			</div>
-			<div class="lazy-overlay">
+			<div class="lazy-overlay <?php if( $provider == "gif") {  echo "gif-image";  } ?>">
 				<img class="lazy-overlay-image" alt="<?php echo $pagetitle; ?>" src="<?php echo $poster; ?>" width="100%" <?php echo ( $loading == "true" ) ? 'loading="lazy"' : '';  ?> />
 				<div class="lazy-overlay-hover"></div>	
 				<div class="lazy-play-icon"></div>
