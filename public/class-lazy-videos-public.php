@@ -124,23 +124,35 @@ class Lazy_Videos_Public {
 				'provider' => 'youtube',
 				'url' => '',
 				'poster' => '',
-				'lazy_loading' => 'true'
+				'lazy_loading' => 'true',
+				'play_icon' => 'show'
 	        ) , 
 	     	$atts , 
 	     	'lazy_videos' 
 	    );
 
+		$pageid = get_the_ID();
 		$mode 		= $atts[ 'mode' ];	
 		$provider 	= $atts[ 'provider' ];
 		$url 		= $atts[ 'url' ];
 		$poster 	= $atts[ 'poster' ];
 		$loading	= $atts[ 'lazy_loading' ];
-
+		$pagetitle	= get_the_title($pageid);
+		$play_icon	= $atts[ 'play_icon' ];
+		
+		
 		if( $url == "" ) {
 
 			$output = '<p style="color:red;">[url] - Video URL is a required parameter';
 			return $output;
 
+		}
+
+		if($provider == "gif") {
+			if( $poster == "" ) {
+				$output = '<p style="color:red;">[poster] - Poster image is a required parameter';
+				return $output;
+			}
 		}
 
 		if( $provider == "youtube" && $poster == "" ) {
@@ -162,22 +174,29 @@ class Lazy_Videos_Public {
 		if( $provider == "vimeo" && $poster == "" ) {
 
 			$video_code = explode( "/", $url )[3];
-			//$video_code =  end($video_url);
 			$poster = "https://vumbnail.com/$video_code.jpg";
 
 		}
+
+		if( $provider == "gif" && $poster != "" ) {
+
+			$gif_code = $url;
+			$poster = $atts[ 'poster' ];
+
+		}
+
 		ob_start();
 
 		?>
 
-		<div class="lazy-video-container" data-mode="<?php echo $mode; ?>" data-provider="<?php echo $provider; ?>" data-url="<?php echo $url; ?>">
+		<div class="lazy-video-container <?php if($provider=="gif") { echo "video-grid-layout"; } ?>" data-mode="<?php echo $mode; ?>" data-provider="<?php echo $provider; ?>" data-url="<?php echo $url; ?>" <?php if( $provider == "gif") { ?> data-title="<?php echo $pagetitle; ?>" <?php } ?>>
 			<div class="lazy-video-box">
 				<div class="lazy-video-wrapper" style="padding-top:56.2963%"></div>
 			</div>
-			<div class="lazy-overlay">
-				<img class="lazy-overlay-image" src="<?php echo $poster; ?>" width="100%" <?php echo ( $loading == "true" ) ? 'loading="lazy"' : '';  ?> />
-				<div class="lazy-overlay-hover"></div>	
-				<div class="lazy-play-icon"></div>
+			<div class="lazy-overlay <?php if( $provider == "gif") {  echo "gif-image";  } ?>">
+				<img class="lazy-overlay-image" alt="<?php echo $pagetitle; ?>" src="<?php echo $poster; ?>" width="100%" <?php echo ( $loading == "true" ) ? 'loading="lazy"' : '';  ?> />
+				<div class="lazy-overlay-hover <?php if($play_icon=="hide") { echo "icon-hide"; } ?>"></div>	
+				<div class="lazy-play-icon <?php if($play_icon=="hide") { echo "icon-hide"; } ?>"></div>
 			</div>	
 		</div>
 

@@ -38,7 +38,9 @@
 			var mode = $(this).parent().parent().data('mode');
 			var provider = $(this).parent().parent().data('provider');
 			var url = $(this).parent().parent().data('url');
+			var title = $(this).parent().parent().data('title');
 			var video_code = '';
+			var gif_code = '';
 			var embed_code = '';
 			var popup_code = '';
 		
@@ -56,6 +58,11 @@
 			if(provider=="vimeo"){
 				video_code  = url.split('/')[3];
 				embed_code = '<iframe loading="lazy" src="https://player.vimeo.com/video/' + video_code  + '?autoplay=1&volume=1" allowtransparency="true" allow="autoplay" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen></iframe>';
+			}
+
+			if(provider=="gif"){
+				gif_code  = url;
+				embed_code = '<img class="html5-image-img" alt="' + title  + '" src="' + gif_code  + '" width="100%" height="auto">';
 			}
 
 			if(mode=="inline"){
