@@ -124,7 +124,8 @@ class Lazy_Videos_Public {
 				'provider' => 'youtube',
 				'url' => '',
 				'poster' => '',
-				'lazy_loading' => 'true'
+				'lazy_loading' => 'true',
+				'play_icon' => 'show'
 	        ) , 
 	     	$atts , 
 	     	'lazy_videos' 
@@ -137,6 +138,8 @@ class Lazy_Videos_Public {
 		$poster 	= $atts[ 'poster' ];
 		$loading	= $atts[ 'lazy_loading' ];
 		$pagetitle	= get_the_title($pageid);
+		$play_icon	= $atts[ 'play_icon' ];
+		
 		
 		if( $url == "" ) {
 
@@ -186,14 +189,14 @@ class Lazy_Videos_Public {
 
 		?>
 
-		<div class="lazy-video-container" data-mode="<?php echo $mode; ?>" data-provider="<?php echo $provider; ?>" data-url="<?php echo $url; ?>" <?php if( $provider == "gif") { ?> data-title="<?php echo $pagetitle; ?>" <?php } ?>>
+		<div class="lazy-video-container <?php if($provider=="gif") { echo "video-grid-layout"; } ?>" data-mode="<?php echo $mode; ?>" data-provider="<?php echo $provider; ?>" data-url="<?php echo $url; ?>" <?php if( $provider == "gif") { ?> data-title="<?php echo $pagetitle; ?>" <?php } ?>>
 			<div class="lazy-video-box">
 				<div class="lazy-video-wrapper" style="padding-top:56.2963%"></div>
 			</div>
 			<div class="lazy-overlay <?php if( $provider == "gif") {  echo "gif-image";  } ?>">
 				<img class="lazy-overlay-image" alt="<?php echo $pagetitle; ?>" src="<?php echo $poster; ?>" width="100%" <?php echo ( $loading == "true" ) ? 'loading="lazy"' : '';  ?> />
-				<div class="lazy-overlay-hover"></div>	
-				<div class="lazy-play-icon"></div>
+				<div class="lazy-overlay-hover <?php if($play_icon=="hide") { echo "icon-hide"; } ?>"></div>	
+				<div class="lazy-play-icon <?php if($play_icon=="hide") { echo "icon-hide"; } ?>"></div>
 			</div>	
 		</div>
 
