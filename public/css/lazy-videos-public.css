@@ -6,7 +6,9 @@
 .lazy-video-container{
     position: relative;
 }
-
+.video-grid-layout {
+	margin-top: 0;
+}
 .lazy-video-box{
     display: block;
     position: relative;
@@ -113,6 +115,14 @@
 .lazy-videos-popup iframe{
     width:100%;
     height:608px;
+}
+.gif-image {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 2px 18px 0px rgba(0,0,0,.3);
+}
+.icon-hide {
+    opacity: 0;
 }
 
 @media only screen and (max-width:1440px){
