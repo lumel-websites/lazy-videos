@@ -35,6 +35,7 @@ Key Features:
 **1.0.2**
 * **Feat:** Added lazy GIF funcationality
 * **Feat:** Added perameter in shortcode for playicon
+* **Feat:** Added height/width perameter in shortcode
 
 **1.0.1**
 * **Fix:** Overlay image position css
