@@ -190,22 +190,29 @@ class Lazy_Videos_Public {
 		}
 
 		ob_start();
+		$dimentions = '';
 		?>
 
-		<?php if(!empty($provider_width) && !empty($provider_height)) { ?>
+		<?php if(!empty($provider_width) && !empty($provider_height)) { 
+		$dimentions = "width=".$provider_width. " height=".$provider_height;
+		?>
 		<style>
 			.lazy-video-container {
 				width: <?php echo $provider_width; ?>;
 				height: <?php echo $provider_height; ?>;
 			}
 		</style>
-		<?php } else if(!empty($provider_width)) { ?>
+		<?php } else if(!empty($provider_width)) { 
+		$dimentions = "width=".$provider_width;
+		?>
 		<style>
 			.lazy-video-container {
 				width: <?php echo $provider_width; ?>;
 			}
 		</style>	
-		<?php } else if(!empty($provider_height)) { ?>
+		<?php } else if(!empty($provider_height)) { 
+		$dimentions = "height=".$provider_height;
+		?>
 		<style>
 			.lazy-video-container {
 				height: <?php echo $provider_height; ?>;
@@ -217,7 +224,7 @@ class Lazy_Videos_Public {
 				<div class="lazy-video-wrapper" style="padding-top:56.2963%"></div>
 			</div>
 			<div class="lazy-overlay <?php if( $provider == "gif") {  echo "gif-image";  } ?>">
-				<img class="lazy-overlay-image" alt="<?php echo $pagetitle; ?>" src="<?php echo $poster; ?>" width="100%" <?php echo ( $loading == "true" ) ? 'loading="lazy"' : '';  ?> />
+				<img class="lazy-overlay-image" alt="<?php echo $pagetitle; ?>" src="<?php echo $poster; ?>" <?php echo $dimentions; ?> <?php echo ( $loading == "true" ) ? 'loading="lazy"' : '';  ?> />
 				<div class="lazy-overlay-hover <?php if($play_icon=="hide") { echo "icon-hide"; } ?>"></div>	
 				<div class="lazy-play-icon <?php if($play_icon=="hide") { echo "icon-hide"; } ?>"></div>
 			</div>	
