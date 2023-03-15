@@ -3,7 +3,7 @@
 * **Tags:** videos, lazy-loading, youtube, vimeo, wistia
 * **Requires at least:** 5.8.1
 * **Tested up to:** 5.8.1
-* **Stable tag:** 1.0.2
+* **Stable tag:** 1.0.3
 * **License:** GPLv2 or later
 * **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,12 +25,15 @@ Key Features:
 
 ### Installation
 
-1. Upload `lazy-videos-1.0.2.zip` to the `/wp-content/plugins/` directory
+1. Upload `lazy-videos-1.0.3.zip` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 ---
 
 ### Changelog
+
+**1.0.3**
+* **Fix:** Updated play icon size for smaller frames
 
 **1.0.2**
 * **Feat:** Added lazy GIF funcationality
