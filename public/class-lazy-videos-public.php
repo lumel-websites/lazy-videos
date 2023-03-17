@@ -225,8 +225,8 @@ class Lazy_Videos_Public {
 			</div>
 			<div class="lazy-overlay <?php if( $provider == "gif") {  echo "gif-image";  } ?>">
 				<img class="lazy-overlay-image" alt="<?php echo $pagetitle; ?>" src="<?php echo $poster; ?>" <?php echo $dimentions; ?> <?php echo ( $loading == "true" ) ? 'loading="lazy"' : '';  ?> />
-				<div class="lazy-overlay-hover <?php if($play_icon=="hide") { echo "icon-hide"; } ?>"></div>	
-				<div class="lazy-play-icon <?php if($play_icon=="hide") { echo "icon-hide"; } ?>"></div>
+				<div class="lazy-overlay-hover <?php if($play_icon=="hide") { echo "icon-hide"; } ?><?php if($play_icon=="hover") { echo "icon-hover"; } ?>"></div>	
+				<div class="lazy-play-icon <?php if($play_icon=="hide") { echo "icon-hide"; } ?><?php if($play_icon=="hover") { echo "icon-hover"; } ?>"></div>
 			</div>	
 		</div>
 

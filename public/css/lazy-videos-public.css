@@ -47,14 +47,14 @@
 
 .lazy-overlay-hover{
     background: rgba(83, 84, 84, 0.76);
-    width: 90px;
-    height: 50px;
+    width: 127px;
+    height: 81px;
     position: absolute;
     z-index: 100;
     left: 50%;
     top: 50%;
-    margin-left: -3rem;
-    margin-top: -2rem;
+    margin-left: -4rem;
+    margin-top: -3rem;
     -webkit-transition: all 80ms ease-out 0s;
     transition: all 80ms ease-out 0s;
 }
@@ -78,11 +78,11 @@
     color: #fff;
     left: 50%;
     top: 50%;
-    margin-left: -3rem;
-    margin-top: -2rem;
-    width:90px;
-    height:50px;
-    background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAABRCAYAAAD7G3lVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAATFJREFUeNrs22FtwkAYx+F2QcAkMAfgYBKQwBxMQh1MwiRQB+CgEoaDzkG5S1a+E5IF+n+e5D4ve3+7N0s4mgYAAAAAAAAAAAAA7jFN06cp5MavjuWsTSMzfjWWszORzPizQzmvJpMZ3xYIj28LiG8LpMeffdsCufGrn3LeTS0z/uzLFsiNbwuEx7cFxL9ugY1pZsafdSaaG78abIHc+LaA+MvbAi/+XG5Sww9L2QLtEm/+P/2oUzkfbduexc+LX51L/DdrP09fzvaZf4GVhjf7/Vv3vVFk/bfvMUhg/PoAZG+6efE9Aw+MP/oCSGZ8tz0wvtseGn9w2zPjdyaXF99n9aHx3fbA+G57aHy3PTC+N/mh8b3DD4zvtofGd9tD47vtAAAAAAAAAAAAADymiwADAOSj1JBfF8xMAAAAAElFTkSuQmCC") no-repeat scroll 0px 0px / 90px 50px; 
+    margin-left: -4rem;
+    margin-top: -3rem;
+    width: 127px;
+    height: 81px;
+    background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAABRCAYAAAD7G3lVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAATFJREFUeNrs22FtwkAYx+F2QcAkMAfgYBKQwBxMQh1MwiRQB+CgEoaDzkG5S1a+E5IF+n+e5D4ve3+7N0s4mgYAAAAAAAAAAAAA7jFN06cp5MavjuWsTSMzfjWWszORzPizQzmvJpMZ3xYIj28LiG8LpMeffdsCufGrn3LeTS0z/uzLFsiNbwuEx7cFxL9ugY1pZsafdSaaG78abIHc+LaA+MvbAi/+XG5Sww9L2QLtEm/+P/2oUzkfbduexc+LX51L/DdrP09fzvaZf4GVhjf7/Vv3vVFk/bfvMUhg/PoAZG+6efE9Aw+MP/oCSGZ8tz0wvtseGn9w2zPjdyaXF99n9aHx3fbA+G57aHy3PTC+N/mh8b3DD4zvtofGd9tD47vtAAAAAAAAAAAAADymiwADAOSj1JBfF8xMAAAAAElFTkSuQmCC") no-repeat scroll 0px 0px / 127px 81px; 
     
 }
 
@@ -123,6 +123,14 @@
 }
 .icon-hide {
     opacity: 0;
+}
+
+.icon-hover {
+    opacity: 0;
+}
+
+.lazy-overlay:hover .icon-hover{
+    opacity:1;
 }
 
 @media only screen and (max-width:1440px){
