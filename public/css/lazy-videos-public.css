@@ -133,6 +133,11 @@
     opacity:1;
 }
 
+.lazy-video-container .lazy-overlay-image {
+	width: 100%;
+	height: auto;
+}
+
 @media only screen and (max-width:1440px){
     .lazy-videos-popup iframe{
         height:486px;
